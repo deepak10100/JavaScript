@@ -1,91 +1,161 @@
-console.log("hello world");
-"use strict";
-// declare a variable 
-var firstName = "deepak";
-// use a variable 
-console.log(firstName);
-// change value 
-firstName = "deepu";
-console.log(firstName);
-var value1 = 2;
-console.log(value1);
-var first_name = "deepak"; // snake case writing 
-var firstName = "deepak"; // camel case writing 
-let firstName = "deepak";
-firstName = "deepu";
-console.log(firstName);
-const pi = 3.14;
-console.log(pi);
-let firstName = "deepakdeepuamanarun";
-console.log(firstName.length);
+// undefined 
+// null
+let firstName;
+console.log(typeof firstName);
+firstName = "Deepak";
+console.log(typeof firstName, firstName);
 
-console.log(firstName[firstName.length-2]);
-// trim() 
-// toUpperCase()
-// toLowerCase()
-// slice()
+let myVariable = null;
+console.log(myVariable);
+myVariable = "Deepak";
+console.log(myVariable, typeof myVariable);
+console.log(typeof null);
 
-let firstName = "Deepak";
+// booleans & comparison operator 
 
-console.log(firstName.length);
-firstName = firstName.trim(); 
-console.log(firstName)
-console.log(firstName.length);
-firstName = firstName.toUpperCase();
-firstName = firstName.toLowerCase();
-console.log(firstName);
-
-// start index 
-// end index
-
-let newString = firstName.slice(1); 
-console.log(newString);
-
-// typeof operator 
-
-// data types (primitive data types)
-// string "deepak"
-// number 2, 4, 5.6 
 // booleans 
-// undefined
-// null 
-// BigInt
-// Symbol
+// true, false 
 
-// let age = 22; 
-// let firstName = "deepak";
+let num1 = 7;
+let num2 = "7";
 
-// console.log(typeof age);
+console.log(num1<num2);
 
-// // 22 -> "22"
-// // convert number to string. 
-// age = age + "";
-// console.log(typeof(age)); "22"
+// == vs === 
+console.log(num1 === num2);
+
+// != vs !==
+
+console.log(num1 !== num2);
+
+// if else condition 
+
+let age = 17;
+
+if(age>=18){
+    console.log("User can play ddlc");
+}else {
+    console.log("User can play mario");
+}
+
+let num = 13;
+
+if(num%2===0){
+    console.log("even");
+}else{
+    console.log("odd");
+}
+
+let firstName1= 0;
+
+if(firstName1){
+    console.log(firstName1);
+}else{
+    console.log("firstName is kinda empty");
+}
+
+// ternary operator / conditional operator 
+
+let age1 = 3;
+let drink = age1 >= 5 ? "coffee" : "milk";
+console.log(drink);
+
+// and  or operator 
 
 
-// // convert string to number. 
 
-let myStr = +"34";
-console.log(typeof myStr);
+if(firstName[0] === "H"){
+    console.log("your name starts with H")
+}
 
-let age = "18";
-age = Number(age);
-console.log(typeof age);
+if(age > 18){
+    console.log("you are above 18");
+}
 
-// string concatenation 
+if(firstName[0] === "H" && age>18){
+    console.log("Name starts with H and above 18");
+}else{
+    console.log("inside else");
+}
+let firstName2 = "arshit";
+let age2 = 16;
 
-let string1 = "17";
-let string2 = "10";
+if(firstName2[0] === "H" || age2>18){
+    console.log("inside if");
+}else{
+    console.log("inside else");
+}
 
-let newString1 = +string1 + +string2;
-console.log(typeof newString1);
-// template string 
-let age1 = 22;
-let firstName = "deepak"
+// nested if else
 
-// "my name is deepak and my age is 22 "
-// let aboutMe = "my name is " + firstName + " and my age is " + age; 
+// winning number 19 
 
-let aboutMe = `my name is ${firstName} and my age is ${age1}`
+// 19 your guess is right 
+// 17 too low 
+// 20 too high 
 
-console.log(aboutMe);
+let winningNumber = 19;
+let userGuess = +prompt("Guess a number");
+
+if(userGuess === winningNumber){
+    console.log("Your guess is right!!");
+}else{
+    if(userGuess < winningNumber){
+        console.log("too low !!!");
+    }else{
+        console.log("too high !!!");
+    }
+}
+
+// if 
+// else if 
+// else if 
+// else if 
+// else 
+
+let tempInDegree = 4;
+
+if(tempInDegree > 40){
+    console.log("too hot");
+}else if(tempInDegree > 30){
+    console.log("lets go for swim");
+}else if(tempInDegree > 20){
+    console.log("weather is cool");
+}else if(tempInDegree > 10){
+    console.log("it is very cold outside");
+}else{
+    console.log("extremely cold");
+}
+
+console.log("hello");
+
+
+// switch statement 
+
+let day = 9;
+
+switch(day){
+    case 0:
+        console.log("Sunday");
+        break; 
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thrusday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    default:
+        console.log("Invalid Day");
+}
