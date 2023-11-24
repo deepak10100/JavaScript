@@ -49,4 +49,40 @@ container.classList.toggle('container')
 container.classList.toggle('container')
 const listItem = document.createElement('li')
 listItem.textContent='deepak programmer'
-container.append(listItem)s
+container.append(listItem)
+_____________________________________________________________
+let main = document.getElementById("main")
+        const p = document.getElementsByTagName("p")
+        let element = document.getElementById("intro")
+        let element1 = document.getElementsByTagName('p')
+        document.getElementById("demo").innerHTML='hello world ' + p[1].innerHTML
+        const demo = document.getElementsByClassName("demo")
+        document.getElementById("intro").innerHTML="deepak" + demo[1].innerHTML
+        const demo = document.getElementById("myImage")
+        demo.src ='./bg-image.jpg'
+        document.getElementById("main").innerHTML=new Date()
+        document.write(new Date())
+        
+        let btn = document.getElementById("btn")
+        btn.addEventListener("click",(e)=>{
+            e.preventDefault()
+            console.log("click")
+            let inputtext = document.querySelector("form input")
+            if(inputtext==""){
+                alert("name is required")
+                return false
+            }
+        })
+
+        let btn = document.getElementById("btn")
+        btn.addEventListener("click",()=>{
+                    document.getElementById("main").style.color='blue'
+
+        })
+        document.getElementById("main").style.color='blue'
+
+        btn.addEventListener("click",()=>{
+                document.getElementById("main").innerHTML="hello"
+                document.getElementById("main").innerHTML=new Date()
+                
+            })
