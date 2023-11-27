@@ -62,3 +62,70 @@ const todoList = document.querySelector(".todo-list")
        li.textContent='deepak'
        todoList.after(li)
        todoList.before(li)
+
+const ul = document.querySelector(".todo-list")
+const li = document.createElement("li")
+li.textContent='new todo'
+const li2 = li.cloneNode(true)
+ul.append(li)
+ul.append(li2)
+
+const ul = document.querySelector('.todo-list')
+const listItem = ul.getElementsByTagName("li")
+const six = document.createElement("li")
+six.textContent = 'deepak'
+ul.append(six)
+console.log(listItem)
+
+const sectionTodo = document.querySelector('.section-todo')
+const info = sectionTodo.getBoundingClientRect()
+console.log(info)
+
+const btn = document.querySelector("#btn")
+     btn.addEventListener("click",()=>{
+        console.log("click")
+        console.log(this)
+     })
+
+     for(let button of btn){
+        button.addEventListener("click",()=>{
+            console.log(this)
+        })
+     }
+
+     for(let i = 0; i<btn.length; i++){
+        btn[i].addEventListener("click",()=>{
+            console.log(this)
+        })
+    }
+
+    btn.forEach((button)=>{
+        button.addEventListener("click",()=>{
+            console.log(this)
+        })
+    })
+
+    btn.forEach((button)=>{
+        button.addEventListener("click",()=>{
+            console.log(this)
+        })
+    })
+
+    for(let button of btn){
+        button.addEventListener("click",(e)=>{
+            e.currentTarget.style.color="green"
+            e.currentTarget.style.backgroundColor='skyblue'
+        })
+    }
+    const body = document.body
+    body.addEventListener("keypress",(e)=>{
+        console.log(e.key)
+    })
+
+    const mainButton = document.querySelector('button')
+    mainButton.addEventListener("mouseover",()=>{
+        console.log('mouseover event')
+    })
+    mainButton.addEventListener("mouseleave",()=>{
+        console.log('mouseover leave')
+    })
