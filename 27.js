@@ -129,3 +129,43 @@ const btn = document.querySelector("#btn")
     mainButton.addEventListener("mouseleave",()=>{
         console.log('mouseover leave')
     })
+
+let w = window.innerWidth;
+let h = window.innerHeight
+document.write("width: ",w, " height: ",h)
+window.open() 
+document.getElementById('demo').innerHTML=screen.width
+document.getElementById('demo1').innerHTML=screen.height
+document.getElementById('demo1').innerHTML=window.location.href
+document.getElementById('demo1').innerHTML=window.location.port
+document.getElementById('demo1').innerHTML=navigator.onLine
+function clicked(){
+    window.location.assign("https://www.facebook.com")
+}
+function clicked1(){
+    window.history.forward()
+    window.history.back()
+}
+function myfunc(){
+let txt;
+if(confirm("press a button")){
+    txt = 'you pressed ok'
+}else{
+    txt = "you pressed cancel"
+}
+document.getElementById("demo").innerHTML=txt
+}
+function myfunc() {
+    let txt;
+    let person = prompt("Please Enter Your Name: ", 'Deepak Malakar')
+    if (person == null || person == "") {
+        txt = 'User Canceled the prompt'
+    } else {
+        txt = 'Hello ' + person + ' How are you today'
+    }
+    document.getElementById("demo").innerHTML = txt
+}
+setInterval(() => {
+    let d = new Date()
+    document.getElementById("demo").innerHTML=d.toLocaleTimeString()
+}, 1000);
